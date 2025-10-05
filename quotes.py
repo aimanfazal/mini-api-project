@@ -1,4 +1,7 @@
 import requests
+import os
+from dotenv import load_dotenv
+
 
 url = "https://api.dailyquotes.dev/api/quotes/motivational"
 headers = {
