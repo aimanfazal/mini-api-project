@@ -22,15 +22,15 @@ These programs demonstrate:
     cd mini-api-project
 
 2. Install dependencies:
-
+    ```bash
     pip install requests python-dotenv
 
 3. Create a .env file in your project directory and add your API keys:
-
+    ```ini
     API_KEY=your_dailyquotes_api_key
     Word_API=your_dictionary_api_key
 
 4. Run the programs:
-
+    ```bash
     python quotes_api.py
     python dictionary_api.py
