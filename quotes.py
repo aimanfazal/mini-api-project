@@ -8,7 +8,7 @@ def load_API():
     load_dotenv()
     return os.getenv('API_KEY')
 
-def displayCatogories(categories):
+def displayCategories(categories):
     '''Displays the list of available quote categories'''
 
     print("Welcome to the \"Random Quote Generator\" program!\n")
@@ -46,7 +46,7 @@ def fetchQuote(category, api_key):
 
 def main():
     '''function with the core tasks'''
-    
+
     categories = ['quotes', 'anime', 'movie', 'dev',
                   'motivational','self_improvement',
                   'game', 'book', 'poetry', 'mentalhealth']
@@ -56,7 +56,7 @@ def main():
         print("No API key found! Please check your .env file.")
         return
     
-    displayCatogories(categories)
+    displayCategories(categories)
     choice = userChoice(categories)
     quoteData = fetchQuote(choice, api_key)
 
