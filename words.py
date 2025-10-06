@@ -1,19 +1,30 @@
 import requests
 import os
-import json
 from dotenv import load_dotenv
 
-load_dotenv()
-api_key = os.getenv('Word_API')
+def fetch_definitions(word):
+    load_dotenv()
+    api_key = os.getenv('Word_API')
 
-word = 'apple'
-url = f"https://www.dictionaryapi.com/api/v3/references/learners/json/{word}?key={api_key}"
+    if not api_key:
+        print("API Key not found! Check the .env file.")
+        return
 
-response = requests.get(url)
-data = response.json()
+    url = f"https://www.dictionaryapi.com/api/v3/references/learners/json/{word}?key={api_key}"
 
-for i in range(len(data)):
-    print(data[i]['meta']['app-shortdef']['hw'])
-    print(data[i]['meta']['app-shortdef']['fl'])
-    print(data[i]['meta']['app-shortdef']['def'][0])
-    print()
+    response = requests.get(url)
+    data = response.json()
+
+    for entry in data:
+        shortdef = entry['meta']['app-shortdef']
+        headword = shortdef['hw']
+        part_of_speech = shortdef['fl']
+        definition = shortdef['def'][0]
+
+        print(f"Word: {headword}")
+        print(f"Part of Speech: {part_of_speech}")
+        print(f"Definition: {definition}\n")
+
+if __name__ == "__main__":
+    word = input("Looking for the perfect word? ").strip()
+    fetch_definitions(word)
