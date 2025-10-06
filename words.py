@@ -11,19 +11,29 @@ def fetch_definitions(word):
         return
 
     url = f"https://www.dictionaryapi.com/api/v3/references/learners/json/{word}?key={api_key}"
-
     response = requests.get(url)
+
+    if response.status_code != 200:
+        print(f"Failed to fetch data! Status Code: {response.status_code}")
+        return
+
     data = response.json()
 
-    for entry in data:
-        shortdef = entry['meta']['app-shortdef']
-        headword = shortdef['hw']
-        part_of_speech = shortdef['fl']
-        definition = shortdef['def'][0]
+    print(f"\n-- Definitons for {word} --\n")
 
-        print(f"Word: {headword}")
-        print(f"Part of Speech: {part_of_speech}")
-        print(f"Definition: {definition}\n")
+    for entry in data:
+        try:
+            shortdef = entry['meta']['app-shortdef']
+            headword = shortdef['hw']
+            part_of_speech = shortdef['fl']
+            definition = shortdef['def'][0]
+
+            print(f"Word: {headword}")
+            print(f"Part of Speech: {part_of_speech}")
+            print(f"Definition: {definition}\n")
+
+        except KeyError:
+            continue
 
 if __name__ == "__main__":
     word = input("Looking for the perfect word? ").strip()
