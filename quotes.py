@@ -2,24 +2,56 @@ import requests
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+def load_API():
+    load_dotenv()
+    return os.getenv('API_KEY')
 
-categories = ['quotes', 'anime', 'movie', 'dev', 'motivational', 'self_improvement', 'game', 'book', 'poetry', 'mentalhealth']
-print("Welcome to Random Quote Generator Program!")
+def displayCatogories(categories):
+    print("Welcome to the \"Random Quote Generator\" program!\n")
+    print("Available categories: ")
+    for idx, category in enumerate(categories, start=1):
+        print(f"{idx}. {category}")
 
-for cat in range(len(categories)):
-    print(f"{cat + 1} = {categories[cat]}")
+def userChoice(categories):
+    choice = int(input("\nSelect the category: "))
+    try:
+        if 1 <= choice <= len(categories):
+            return categories[choice - 1]
+        else:
+            print("Invalid selection! Please select a valid number (1-10)")
+            return userChoice(categories)  
+    except ValueError:
+        print("Invalid input! Enter only integer numbers (1-10)")
+        return userChoice(categories)
 
-i = int(input("Select the category of the quote211qqew: ")) - 1
+def fetchQuote(category, api_key):
+    url = f"https://api.dailyquotes.dev/api/quotes/{category}"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return {"error": f"Failed to fetch quote. Status code: {response.status_code}"}
 
-api_key = os.getenv('API_KEY')
+def main():
+    categories = ['quotes', 'anime', 'movie', 'dev',
+                  'motivational','self_improvement',
+                  'game', 'book', 'poetry', 'mentalhealth']
+    
+    api_key = load_API()
+    if not api_key:
+        print("No API key found! Please check your .env file.")
+        return
+    
+    displayCatogories(categories)
+    choice = userChoice(categories)
+    quoteData = fetchQuote(choice, api_key)
 
-url = f"https://api.dailyquotes.dev/api/quotes/{categories[i]}"
-headers = {
-    "Authorization": f"Bearer {api_key}",
-    "Content-Type": "application/json"
-}
+    print("\nQuote Data:")
+    print(quoteData)
 
-response = requests.get(url, headers=headers)
-data = response.json()
-print(data)
+if __name__ == "__main__":
+    main()
