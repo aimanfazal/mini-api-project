@@ -1,148 +1,167 @@
-# Python Mini Projects
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Status](https://img.shields.io/badge/Status-Learning-green)
+![Projects](https://img.shields.io/badge/Projects-7-orange)
 
-A collection of Python mini-projects created while learning and practicing core programming concepts. These projects cover Python fundamentals, API integration, game development, data handling, and problem-solving.
+# 🚀 Python Mini Projects
 
-## Projects Included
+A collection of Python mini-projects built while learning and practicing core programming concepts. This repository showcases projects covering **Python fundamentals**, **API integration**, **game development**, **data handling**, and **problem-solving**.
 
-### 1. News API Client (`api_pull.py`)
+---
+
+## 📂 Projects Included
+
+### 📰 News API Client (`api_pull.py`)
 
 Fetches and displays the latest business news headlines using the NewsAPI service.
 
-**Concepts used:**
+#### Concepts Covered
 
 * REST APIs
-* HTTP requests
-* JSON parsing
-* Data extraction
+* HTTP Requests
+* JSON Parsing
+* Data Extraction
 
 ---
 
-### 2. KBC Quiz Game (`kbc.py`)
+### 🎯 KBC Quiz Game (`kbc.py`)
 
 A command-line quiz game inspired by *Kaun Banega Crorepati (KBC)*.
 
-**Features:**
+#### Features
 
-* Multiple-choice questions
-* Prize progression system
-* Safe amount tracking
-* Option to quit anytime
+* ✅ Multiple-choice questions
+* ✅ Prize progression system
+* ✅ Safe amount tracking
+* ✅ Option to quit anytime
 
-**Concepts used:**
+#### Concepts Covered
 
 * Loops
-* Conditional statements
-* Lists and dictionaries
-* User input handling
+* Conditional Statements
+* Lists & Dictionaries
+* User Input Handling
 
 ---
 
-### 3. Kirana Billing System (`kirana_billing.py`)
+### 🧾 Kirana Billing System (`kirana_billing.py`)
 
 A simple billing application for generating customer bills.
 
-**Features:**
+#### Features
 
-* Product entry
-* Quantity and price calculation
-* Bill generation
+* ✅ Product entry
+* ✅ Quantity and price calculation
+* ✅ Bill generation
 
-**Concepts used:**
+#### Concepts Covered
 
 * Dictionaries
-* Data storage
-* Arithmetic operations
+* Data Storage
+* Arithmetic Operations
 
 ---
 
-### 4. Secret Message Encoder & Decoder (`pri_comm.py`)
+### 🔐 Secret Message Encoder & Decoder (`pri_comm.py`)
 
 Encodes and decodes messages using a custom text transformation algorithm.
 
-**Features:**
+#### Features
 
-* Message encryption
-* Message decryption
-* Randomized character generation
+* ✅ Message encryption
+* ✅ Message decryption
+* ✅ Randomized character generation
 
-**Concepts used:**
+#### Concepts Covered
 
-* String manipulation
+* String Manipulation
 * Functions
-* Random module
+* Random Module
 
 ---
 
-### 5. Snake Water Gun Game (`snake-water-gun.py`)
+### 🐍 Snake Water Gun Game (`snake-water-gun.py`)
 
 A Python implementation of the classic Snake-Water-Gun game.
 
-**Features:**
+#### Features
 
-* Player vs Computer gameplay
-* Score tracking
-* Multiple rounds
+* ✅ Player vs Computer gameplay
+* ✅ Score tracking
+* ✅ Multiple rounds
 
-**Concepts used:**
+#### Concepts Covered
 
 * Randomization
-* Game logic
-* Conditional statements
+* Game Logic
+* Conditional Statements
 
 ---
 
-## Mini API Projects
+## 🌐 Mini API Projects
 
-### Random Quote Generator (`mini-api-project/quotes.py`)
+### 💬 Random Quote Generator (`mini-api-project/quotes.py`)
 
 Retrieves inspirational quotes from an external API.
 
-**Concepts used:**
+#### Concepts Covered
 
-* API integration
-* Environment variables
-* JSON handling
+* API Integration
+* Environment Variables
+* JSON Handling
 
 ---
 
-### Dictionary Lookup Tool (`mini-api-project/words.py`)
+### 📖 Dictionary Lookup Tool (`mini-api-project/words.py`)
 
 Searches for word definitions using the Merriam-Webster Dictionary API.
 
-**Concepts used:**
+#### Concepts Covered
 
 * REST APIs
-* JSON parsing
-* Error handling
+* JSON Parsing
+* Error Handling
 
 ---
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 * Python 3
 * Requests
 * JSON
-* dotenv
-
-## Learning Objectives
-
-This repository was created to practice:
-
-* Python fundamentals
-* Problem-solving skills
-* API integration
-* Data structures
-* User interaction
-* Project organization
-
-## Future Improvements
-
-* Add better exception handling
-* Improve project structure
-* Add unit tests
-* Create graphical interfaces for selected projects
-* Enhance documentation
+* python-dotenv
 
 ---
 
-Created as part of my Python learning journey.
+## 🎯 Learning Objectives
+
+This repository was created to strengthen my understanding of:
+
+* Python Fundamentals
+* Problem Solving
+* API Integration
+* Data Structures
+* User Interaction
+* Project Organization
+
+---
+
+## 📈 Future Improvements
+
+* [ ] Add better exception handling
+* [ ] Improve project structure
+* [ ] Add unit tests
+* [ ] Create graphical interfaces for selected projects
+* [ ] Enhance documentation
+* [ ] Add screenshots and usage examples
+
+---
+
+## 👨‍💻 Author
+
+**Aiman Fazal**
+
+GitHub: https://github.com/aimanfazal
+
+---
+
+⭐ If you found these projects interesting, feel free to explore the code and follow my learning journey!
