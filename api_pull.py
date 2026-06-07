@@ -1,14 +1,31 @@
+import os
 import requests
-import json
+from dotenv import load_dotenv
 
-# query = input("What updates do you want to get? ")
-url = f"https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=a35555a8178043c1844fbb10fbe13615"
+load_dotenv()
 
-r = requests.get(url)
+api_key = os.getenv("NEWS_API_KEY")
 
-news = json.loads(r.text)
+if not api_key:
+raise ValueError("NEWS_API_KEY not found in .env file")
+
+url = (
+f"https://newsapi.org/v2/top-headlines?"
+f"country=us&category=business&apiKey={api_key}"
+)
+
+try:
+response = requests.get(url, timeout=10)
+response.raise_for_status()
+
+```
+news = response.json()
 
 for article in news["articles"]:
-    print(article["title"])
+    print(f"📰 {article['title']}")
     print(article["description"])
-    print()
+    print("-" * 80)
+```
+
+except requests.exceptions.RequestException as e:
+print(f"Error fetching news: {e}")
