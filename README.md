@@ -1,36 +1,148 @@
-# 🧩 Mini API Project
+# Python Mini Projects
 
-This repository contains two simple Python programs that helped me understand how APIs work and how to use them in Python.
+A collection of Python mini-projects created while learning and practicing core programming concepts. These projects cover Python fundamentals, API integration, game development, data handling, and problem-solving.
 
-## 🚀 Overview
+## Projects Included
 
-1. **Random Quote Generator** — Fetches a random quote from different categories using the [DailyQuotes API](https://dailyquotes.dev/).
-2. **Dictionary Lookup Tool** — Fetches word definitions using the [Merriam-Webster Dictionary API](https://dictionaryapi.com/).
+### 1. News API Client (`api_pull.py`)
 
-These programs demonstrate:
-- How to use `requests` to interact with REST APIs  
-- How to handle JSON data  
-- How to securely load API keys using environment variables (`.env` file)
+Fetches and displays the latest business news headlines using the NewsAPI service.
+
+**Concepts used:**
+
+* REST APIs
+* HTTP requests
+* JSON parsing
+* Data extraction
 
 ---
 
-## 🔑 Setup Instructions
+### 2. KBC Quiz Game (`kbc.py`)
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/mini-api-project.git
-    cd mini-api-project
+A command-line quiz game inspired by *Kaun Banega Crorepati (KBC)*.
 
-2. Install dependencies:
-    ```bash
-    pip install requests python-dotenv
+**Features:**
 
-3. Create a .env file in your project directory and add your API keys:
-    ```ini
-    API_KEY=your_dailyquotes_api_key
-    Word_API=your_dictionary_api_key
+* Multiple-choice questions
+* Prize progression system
+* Safe amount tracking
+* Option to quit anytime
 
-4. Run the programs:
-    ```bash
-    python quotes_api.py
-    python dictionary_api.py
+**Concepts used:**
+
+* Loops
+* Conditional statements
+* Lists and dictionaries
+* User input handling
+
+---
+
+### 3. Kirana Billing System (`kirana_billing.py`)
+
+A simple billing application for generating customer bills.
+
+**Features:**
+
+* Product entry
+* Quantity and price calculation
+* Bill generation
+
+**Concepts used:**
+
+* Dictionaries
+* Data storage
+* Arithmetic operations
+
+---
+
+### 4. Secret Message Encoder & Decoder (`pri_comm.py`)
+
+Encodes and decodes messages using a custom text transformation algorithm.
+
+**Features:**
+
+* Message encryption
+* Message decryption
+* Randomized character generation
+
+**Concepts used:**
+
+* String manipulation
+* Functions
+* Random module
+
+---
+
+### 5. Snake Water Gun Game (`snake-water-gun.py`)
+
+A Python implementation of the classic Snake-Water-Gun game.
+
+**Features:**
+
+* Player vs Computer gameplay
+* Score tracking
+* Multiple rounds
+
+**Concepts used:**
+
+* Randomization
+* Game logic
+* Conditional statements
+
+---
+
+## Mini API Projects
+
+### Random Quote Generator (`mini-api-project/quotes.py`)
+
+Retrieves inspirational quotes from an external API.
+
+**Concepts used:**
+
+* API integration
+* Environment variables
+* JSON handling
+
+---
+
+### Dictionary Lookup Tool (`mini-api-project/words.py`)
+
+Searches for word definitions using the Merriam-Webster Dictionary API.
+
+**Concepts used:**
+
+* REST APIs
+* JSON parsing
+* Error handling
+
+---
+
+## Technologies Used
+
+* Python 3
+* Requests
+* JSON
+* dotenv
+
+## Learning Objectives
+
+This repository was created to practice:
+
+* Python fundamentals
+* Problem-solving skills
+* API integration
+* Data structures
+* User interaction
+* Project organization
+
+## Future Improvements
+
+* Add better exception handling
+* Improve project structure
+* Add unit tests
+* Create graphical interfaces for selected projects
+* Enhance documentation
+
+---
+
+Created as part of my Python learning journey.
